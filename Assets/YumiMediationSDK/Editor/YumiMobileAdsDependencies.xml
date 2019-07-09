@@ -6,11 +6,11 @@
             <repository>https://jcenter.bintray.com/</repository>
         </repositories>
     </androidPackages>
-    <!--<iosPods>
+    <iosPods>
         <iosPod name="YumiAdSDK" version="1.0.0" minTargetSdk="8.0">
             <sources>
                 <source>https://github.com/CocoaPods/Specs</source>
             </sources>
         </iosPod>
-    </iosPods>-->
+    </iosPods>
 </dependencies>

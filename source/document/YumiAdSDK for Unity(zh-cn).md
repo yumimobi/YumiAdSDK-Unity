@@ -119,8 +119,6 @@ YumiAdSDK Unity 插件随着 [Unity Play Services Resolver library](https://gith
     </iosPods>
 ```
 
-比如删除 `AdMob` ，直接删除 ` <iosPod name="YumiMediationAdapters/AdMob" version="4.1.0"></iosPod>`  即可。
-
 构建完成，打开 **xcworkspace** 工程。
 
 **注意：使用 CocoaPods 识别 iOS 依赖项。 CocoaPods 作为后期构建过程步骤运行。**
