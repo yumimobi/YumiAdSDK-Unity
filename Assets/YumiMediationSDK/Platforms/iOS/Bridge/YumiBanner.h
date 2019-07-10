@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "YumiTypes.h"
-#import <YumiMediationSDK/YumiMediationBannerView.h>
+#import <YumiAdSDK/YumiMediationBannerView.h>
 
 @interface YumiBanner : NSObject
 

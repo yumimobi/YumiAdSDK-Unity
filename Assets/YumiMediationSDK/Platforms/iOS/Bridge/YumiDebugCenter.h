@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <YumiMediationDebugCenter-iOS/YumiMediationDebugController.h>
+//#import <YumiMediationDebugCenter-iOS/YumiMediationDebugController.h>
 
 
 @interface YumiDebugCenter : NSObject
