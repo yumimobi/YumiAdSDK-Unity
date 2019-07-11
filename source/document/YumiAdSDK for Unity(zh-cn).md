@@ -38,21 +38,18 @@
             * [5.5.3 处理回调](#553-处理回调)
             * [5.5.4 YumiSplashOptions](#554-yumisplashoptions)
             * [5.5.5 显示半屏广告](#555-显示半屏广告)
-      * [6 调试模式](#6-调试模式)
-         * [6.1 调用调试模式](#61-调用调试模式)
-         * [6.2 图示](#62-图示)
-      * [7 常见问题](#7-常见问题)
-         * [7.1 TEST ID](#71-test-id)
-         * [7.2 Android 打包失败](#72-android-打包失败)
-            * [7.2.1 Failed to find Build Tools...](#721-failed-to-find-build-tools)
-            * [7.2.2 No toolchains found...](#722-no-toolchains-found)
-            * [7.2.3 Failed to apply plugin...](#723-failed-to-apply-plugin)
-            * [7.2.4 加载三方 SDK 时间过长](#724-加载三方-sdk-时间过长)
-            * [7.2.5 64k 引用限制](#725-64k-引用限制)
-            * [7.2.6 点击 Android Resolver/Force Resolve选项加载SDK提示失败。](#726-点击-android-resolverforce-resolve选项加载sdk提示失败)
-         * [7.3 android 9.0 适配](#73-android-90-适配)
-      * [8 GDPR](#8-gdpr)
-         * [8.1 设置 GDPR](#81-设置-gdpr)
+      * [6 常见问题](#6-常见问题)
+         * [6.1 TEST ID](#61-test-id)
+         * [6.2 Android 打包失败](#62-android-打包失败)
+            * [6.2.1 Failed to find Build Tools...](#621-failed-to-find-build-tools)
+            * [6.2.2 No toolchains found...](#622-no-toolchains-found)
+            * [6.2.3 Failed to apply plugin...](#623-failed-to-apply-plugin)
+            * [6.2.4 加载三方 SDK 时间过长](#624-加载三方-sdk-时间过长)
+            * [6.2.5 64k 引用限制](#625-64k-引用限制)
+            * [6.2.6 点击 Android Resolver/Force Resolve选项加载SDK提示失败。](#626-点击-android-resolverforce-resolve选项加载sdk提示失败)
+         * [6.3 android 9.0 适配](#73-android-90-适配)
+      * [7 GDPR](#7-gdpr)
+         * [7.1 设置 GDPR](#71-设置-gdpr)
          
 # YumiAdSDK for Unity
 
@@ -68,7 +65,7 @@
 
    - 部署 iOS
      
-     Xcode 7.0 或更高版本
+     Xcode 6.0 或更高版本
      
      iOS 8.0 或更高版本
 
@@ -739,50 +736,9 @@ YumiSplashAd splashAd = new YumiSplashAd(SplashPlacementId, ChannelId, GameVersi
 
 ```
 
-## 6 调试模式
+## 6 常见问题
 
-如果您想调试平台 key 是否有广告返回，可选择调试模式。 
-
-### 6.1 调用调试模式
-
-```C#
-using YumiMediationSDK.Api;
-using YumiMediationSDK.Common;
-
-public class YumiSDKDemo : MonoBehaviour
-{
-   private YumiDebugCenter debugCenter;
-  
-   private void CallDebugCenter(){
-        if (this.debugCenter == null)
-        {
-            this.debugCenter = new YumiDebugCenter();
-        }
-        // 注意：填写的广告位信息要区分iOS和Android
-        this.debugCenter.PresentYumiMediationDebugCenter("YOUR_BANNER_PLACEMENT_ID", "YOUR_INTERSTITIAL_PLACEMENT_ID", "YOUR_REWARDVIDEO_PLACEMENT_ID", "YOUR_NATIVE_PLACEMENT_ID","YOUR_SPLASH_PLACEMENT_ID","YOUR_CHANNEL_ID", "YOUR_VERSION_ID");
-    }
-}
-```
-
-### 6.2 图示
-
-以 iOS 平台为例（Android 平台逻辑相同，UI 不同）。
-
-<div align="center"><img width="200" height="352" src="resources/debug-1.png"/></div>
-
-*<p align="center" size=1>选择平台类型</p>*
-
-<div align="center"><img width="200" height="352" src="resources/debug-2.png"/></div>
-
-*<p align="center" size=1>选择单一平台进行调试<br>如果您需要的平台未在列表中，则代表此平台未添加至工程中<br>绿色平台为已添加至工程并且已配置<br>灰色平台为已添加至工程但未配置</p>*
-
-<div align="center"><img width="200" height="352" src="resources/debug-3.png"/></div>
-
-*<p align="center" size=1>选择广告类型，调试单一平台</p>*
-
-## 7 常见问题
-
-### 7.1 TEST ID
+### 6.1 TEST ID
  
 
 | 系统    | 广告类型       | Slot(Placement) ID |
@@ -798,8 +754,8 @@ public class YumiSDKDemo : MonoBehaviour
 | iOS     | Native         | atb3ke1i           | 
 | iOS     |   Splash       | pwmf5r42           |
 
-### 7.2 Android 打包失败
-#### 7.2.1 Failed to find Build Tools...
+### 6.2 Android 打包失败
+#### 6.2.1 Failed to find Build Tools...
 ```
 * What went wrong:
 A problem occurred configuring root project 'gradleOut'.
@@ -810,7 +766,7 @@ A problem occurred configuring root project 'gradleOut'.
 
 从 [mainTemplet](../../Assets/Plugins/Android/mainTemplate.gradle) 中删除 `buildToolsVersion '**BUILDTOOLS**'` 
 
-#### 7.2.2 No toolchains found...
+#### 6.2.2 No toolchains found...
 ```
 * What went wrong:
 A problem occurred configuring root project 'gradleOut'.
@@ -821,7 +777,7 @@ A problem occurred configuring root project 'gradleOut'.
 
 修改 [mainTemplet](../../Assets/Plugins/Android/mainTemplate.gradle) 中 gradle plugin 版本，如将 `classpath 'com.android.tools.build:gradle:3.0.1'` 修改为 `classpath 'com.android.tools.build:gradle:3.2.1'`。
 
-#### 7.2.3 Failed to apply plugin...
+#### 6.2.3 Failed to apply plugin...
 ```
 * What went wrong:
 A problem occurred evaluating root project 'gradleOut'.
@@ -833,10 +789,10 @@ A problem occurred evaluating root project 'gradleOut'.
 
 1. 升级 gradle 版本至 4.6
 2. 降级 gradle plugin 版本至 gradle 4.2.1 对应的版本。对照 [Update Gradle](https://developer.android.com/studio/releases/gradle-plugin#updating-gradle) 文档可知需要将 [mainTemplet](../../Assets/Plugins/Android/mainTemplate.gradle) 中 `classpath 'com.android.tools.build:gradle:x.x.x'` 修改为 `classpath 'com.android.tools.build:gradle:3.0.0+'`
-#### 7.2.4 加载三方 SDK 时间过长
+#### 6.2.4 加载三方 SDK 时间过长
 执行 Android Resolver -> Resolve/Force resolve 时，插件会自动下载并导入相关 aar。如果添加多个平台，各平台依赖库版本不一致时插件会尝试自动解决依赖冲突，此过程可能耗时较长，请耐心等待。解决冲突时，尽量不要操作 Unity IDE，否则 Unity IDE 可能会出现卡死现象。
 
-#### 7.2.5 64k 引用限制
+#### 6.2.5 64k 引用限制
 添加过多三方 SDK 会导致 64k 引用限制问题，可以通过以下方式之一解决此问题：
 
 解决方案一：查看 Unity 工程 Assets/Plugins/Android/ 下是否有 AndroidManifest.xml 与 mainTemplate.gradle 文件，若没有则复制此文件并添加到 Assets/Plugins/Android/ 目录下，文件地址：[AndroidManifest.xml](https://github.com/yumimobi/YumiAdSDK-Unity/blob/master/Assets/Plugins/Android/AndroidManifest.xml)，[mainTemplate.gradle](https://github.com/yumimobi/YumiAdSDK-Unity/blob/master/Assets/Plugins/Android/mainTemplate.gradle)；如果有这两个文件，则修改 AndroidManifest.xml 文件，如下：
@@ -870,7 +826,7 @@ dependencies {
 
 解决方案二：将项目导出 Android Studio 工程，然后根据 [规避 64K 限制](https://developer.android.com/studio/build/multidex#avoid) 方案解决。
 
-#### 7.2.6 点击 Android Resolver/Force Resolve选项加载SDK提示失败。
+#### 6.2.6 点击 Android Resolver/Force Resolve选项加载SDK提示失败。
 点击 Assets/Play Services Resolver/Android Resolver/Force Resolve选项出现下面的报错日志：
 ```
 stderr:
@@ -886,18 +842,18 @@ Exception in thread "main" java.lang.RuntimeException: Timeout of 120000 reached
 
 <div align="center"><img height="352" src="resources/mainTemplate.png"/></div>
 
-### 7.3 android 9.0 适配
+### 6.3 android 9.0 适配
 如果在Android9.0以上系统出现崩溃，可以通过以下方法解决。
 
 - 将targaetSDKveriosn设置为27或者27以下。
 
 
-## 8 GDPR
+## 7 GDPR
 本文件是为遵守欧洲联盟的一般数据保护条例(GDPR)而提供的。
 自 YumiAdSDK 1.0.0 起，如果您正在收集用户的信息，您可以使用下面提供的api将此信息通知给 YumiAdSDK。
 更多信息请查看我们的官网。
 
-### 8.1 设置 GDPR
+### 7.1 设置 GDPR
 
 ```C#
 public enum YumiConsentStatus
