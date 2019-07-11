@@ -38,18 +38,18 @@
             * [5.5.3 Handle Delegate](#553-handle-delegate)
             * [5.5.4 YumiSplashOptions](#554-yumisplashoptions)
             * [5.5.5 Show splash with bottom custom view](#555-show-splash-with-bottom-custom-view)
-      * [7 Common issues of developer](#7-common-issues-of-developer)
-         * [7.1 TEST ID](#71-test-id)
-         * [7.2 Android build failed](#72-android-build-failed)
-            * [7.2.1 Failed to find Build Tools...](#721-failed-to-find-build-tools)
-            * [7.2.2 No toolchains found...](#722-no-toolchains-found)
-            * [7.2.3 Failed to apply plugin...](#723-failed-to-apply-plugin)
-            * [7.2.4 Resolving Android Dependencies](#724-resolving-android-dependencies)
-            * [7.2.5 the 64K reference limit](#725-the-64k-reference-limit)
-            * [7.2.6 Clicking the Android Resolver/Force Resolve option Android dependencies failed](#726-clicking-the-android-resolverforce-resolve-option-android-dependencies-failed)
-         * [7.3 Android 9.0 compatibility considerations](#73-android-90-compatibility-considerations)
-      * [8 GDPR](#8-gdpr)
-         * [8.1 Set GDPR](#81-set-gdpr)
+      * [6 Common issues of developer](#6-common-issues-of-developer)
+         * [6.1 TEST ID](#61-test-id)
+         * [6.2 Android build failed](#62-android-build-failed)
+            * [6.2.1 Failed to find Build Tools...](#621-failed-to-find-build-tools)
+            * [6.2.2 No toolchains found...](#622-no-toolchains-found)
+            * [6.2.3 Failed to apply plugin...](#623-failed-to-apply-plugin)
+            * [6.2.4 Resolving Android Dependencies](#624-resolving-android-dependencies)
+            * [6.2.5 the 64K reference limit](#625-the-64k-reference-limit)
+            * [6.2.6 Clicking the Android Resolver/Force Resolve option Android dependencies failed](#626-clicking-the-android-resolverforce-resolve-option-android-dependencies-failed)
+         * [6.3 Android 9.0 compatibility considerations](#63-android-90-compatibility-considerations)
+      * [7 GDPR](#7-gdpr)
+         * [7.1 Set GDPR](#71-set-gdpr)
          
 # YumiAdSDK for Unity
 
@@ -65,7 +65,7 @@
 
    - To deploy to iOS
 
-     Xcode 7.0 or higher
+     Xcode 6.0 or higher
 
      iOS 8.0 and above
 
@@ -740,9 +740,9 @@ YumiSplashAd splashAd = new YumiSplashAd(SplashPlacementId, ChannelId, GameVersi
 
 ```
 
-## 7 Common issues of developer 
+## 6 Common issues of developer 
 
-### 7.1 TEST ID
+### 6.1 TEST ID
  
 
 | OS      | Formats        | Slot(Placement) ID |
@@ -758,8 +758,8 @@ YumiSplashAd splashAd = new YumiSplashAd(SplashPlacementId, ChannelId, GameVersi
 | iOS     | Native         | atb3ke1i           |
 | iOS     | Splash         | pwmf5r42           |
 
-### 7.2 Android build failed
-#### 7.2.1 Failed to find Build Tools...
+### 6.2 Android build failed
+#### 6.2.1 Failed to find Build Tools...
 ```
 * What went wrong:
 A problem occurred configuring root project 'gradleOut'.
@@ -769,7 +769,7 @@ A problem occurred configuring root project 'gradleOut'.
 
 Remove `buildToolsVersion '**BUILDTOOLS**'` in [mainTemplet](../../Assets/Plugins/Android/mainTemplate.gradle).
 
-#### 7.2.2 No toolchains found...
+#### 6.2.2 No toolchains found...
 ```
 * What went wrong:
 A problem occurred configuring root project 'gradleOut'.
@@ -779,7 +779,7 @@ A problem occurred configuring root project 'gradleOut'.
 
 Change the version of gradle plugin in [mainTemplet](../../Assets/Plugins/Android/mainTemplate.gradle), for example, change `classpath 'com.android.tools.build:gradle:3.0.1'` to `classpath 'com.android.tools.build:gradle:3.2.1'`.
 
-#### 7.2.3 Failed to apply plugin...
+#### 6.2.3 Failed to apply plugin...
 ```
 * What went wrong:
 A problem occurred evaluating root project 'gradleOut'.
@@ -791,10 +791,10 @@ A problem occurred evaluating root project 'gradleOut'.
 1. upgrade gradle version to 4.6
 2. degrade gradle plugin to match gradle 4.2.1 version. you can check [Update Gradle](https://developer.android.com/studio/releases/gradle-plugin#updating-gradle) to change the gradle plugin version in [mainTemplet](../../Assets/Plugins/Android/mainTemplate.gradle), for example, change `classpath 'com.android.tools.build:gradle:x.x.x'` to `classpath 'com.android.tools.build:gradle:3.0.0+'`.
 
-#### 7.2.4 Resolving Android Dependencies
+#### 6.2.4 Resolving Android Dependencies
 It maybe spend some time to resolving android dependencies when clicked Assets -> Play Services Resolver -> Android Resolver -> Resolve / Force Resolve. More androidPackages added and more time will be taken. When resolving conflicts, try not to use the Unity IDE, otherwise the Unity IDE may become stuck.
 
-#### 7.2.5 the 64K reference limit
+#### 6.2.5 the 64K reference limit
 You can use one of the following solutions to avoid the 64K reference limit:
 
 Solution-A: Modify AndroidManifest.xml and mainTemplate.gradle which located Unity project's Assets/Plugins/Android/, if there are no such files then copy from [AndroidManifest](https://github.com/yumimobi/YumiAdSDK-Unity/blob/master/Assets/Plugins/Android/AndroidManifest.xml) and [mainTemplate](https://github.com/yumimobi/YumiAdSDK-Unity/blob/master/Assets/Plugins/Android/mainTemplate.gradle).
@@ -830,7 +830,7 @@ dependencies {
 
 Solution-B: Export Unity project to Android Studio project, then to [Avoid the 64K limit](https://developer.android.com/studio/build/multidex#avoid).
 
-#### 7.2.6 Clicking the Android Resolver/Force Resolve option Android dependencies failed
+#### 6.2.6 Clicking the Android Resolver/Force Resolve option Android dependencies failed
 Clicking Assets/Play Services Resolver/Android Resolver/Force Resolve option error log：
 ```
 stderr:
@@ -847,17 +847,17 @@ Generate the mainTemplate.gradle file using the Unity tool：
 <div align="center"><img height="352" src="resources/mainTemplate.png"/></div>
 
 
-### 7.3 Android 9.0 compatibility considerations
+### 6.3 Android 9.0 compatibility considerations
 At present, Mintegral platform the Android SDK does not support Android9.0 or above. If the app crashes above Android9.0, you can solve by the ways below.
 
 - Set targaetSDKveriosn to 27 or less
 
-## 8 GDPR
+## 7 GDPR
 This documentation is provided for compliance with the European Union's General Data Protection Regulation (GDPR). 
 If you are collecting consent from your users, you can make use of APIs discussed below to inform YumiAdSDK and some downstream consumers of this information. 
 Get more information, please visit our official website.
 
-### 8.1 Set GDPR
+### 7.1 Set GDPR
 
 ```C#
 public enum YumiConsentStatus

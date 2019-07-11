@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/YumiMediationSDK/Api/YumiSplashScene.unity
+    guid: 2f28a3fcc2aed453084c57a226557d1e
+  - enabled: 1
+    path: Assets/YumiSamples/Scene/YumiMainDemoScene.unity
+    guid: 0446d97ef00fb4faeae35c56b1aa4091
+  - enabled: 1
+    path: Assets/YumiSamples/Scene/YumiNativeDemoScene.unity
+    guid: e280223757e274c72a067621002e0903
   m_configObjects: {}

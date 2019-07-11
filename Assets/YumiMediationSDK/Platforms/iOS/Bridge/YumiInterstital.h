@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "YumiTypes.h"
-#import <YumiMediationSDK/YumiMediationInterstitial.h>
+#import <YumiAdSDK/YumiMediationInterstitial.h>
 
 @interface YumiInterstital : NSObject
 

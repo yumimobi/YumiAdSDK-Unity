@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "YumiTypes.h"
-#import <YumiMediationSDK/YumiMediationNativeAd.h>
+#import <YumiAdSDK/YumiMediationNativeAd.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
