@@ -47,7 +47,8 @@
             * [6.2.4 加载三方 SDK 时间过长](#624-加载三方-sdk-时间过长)
             * [6.2.5 64k 引用限制](#625-64k-引用限制)
             * [6.2.6 点击 Android Resolver/Force Resolve选项加载SDK提示失败。](#626-点击-android-resolverforce-resolve选项加载sdk提示失败)
-         * [6.3 android 9.0 适配](#73-android-90-适配)
+         * [6.3 android 9.0 适配](#63-android-90-适配)
+         * [6.4 targetSdkVersion &gt;= 24 适配(必选)](#64-targetsdkversion--24-适配必选)
       * [7 GDPR](#7-gdpr)
          * [7.1 设置 GDPR](#71-设置-gdpr)
          
