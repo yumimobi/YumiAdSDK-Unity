@@ -111,7 +111,7 @@ iOS dependencies：
 
 ```xml
     <iosPods>
-        <iosPod name="YumiAdSDK" version="1.0.0" minTargetSdk="8.0">
+        <iosPod name="YumiAdSDK" version="1.1.1" minTargetSdk="8.0">
             <sources>
                 <source>https://github.com/CocoaPods/Specs</source>
             </sources>
@@ -136,7 +136,7 @@ Android dependencies:
 
 ```xml
 <androidPackages>
-  <androidPackage spec="com.yumimobi.ads:yumiad:4.1.0" />
+  <androidPackage spec="com.yumimobi.ads:yumiad:1.1.1" />
   <repositories>
       <repository>https://jcenter.bintray.com/</repository>
   </repositories>
