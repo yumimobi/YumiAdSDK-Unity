@@ -48,6 +48,7 @@
             * [6.2.5 the 64K reference limit](#625-the-64k-reference-limit)
             * [6.2.6 Clicking the Android Resolver/Force Resolve option Android dependencies failed](#626-clicking-the-android-resolverforce-resolve-option-android-dependencies-failed)
          * [6.3 Android 9.0 compatibility considerations](#63-android-90-compatibility-considerations)
+         * [6.4 targetSdkVersion &gt;= 24 compatibility considerations (Required)](#64-targetsdkversion--24-compatibility-considerations-required)
       * [7 GDPR](#7-gdpr)
          * [7.1 Set GDPR](#71-set-gdpr)
          
@@ -851,6 +852,50 @@ Generate the mainTemplate.gradle file using the Unity tool：
 At present, Mintegral platform the Android SDK does not support Android9.0 or above. If the app crashes above Android9.0, you can solve by the ways below.
 
 - Set targaetSDKveriosn to 27 or less
+
+### 6.4 targetSdkVersion >= 24 compatibility considerations (Required)
+ when you package the app setting targetSdkVersion >= 24 , in order for the SDK to download and install the App class ads can be support normally, you must follow the steps below for compatibility.
+ 
+ **Step 1: Add this provider tag in the Application tag at AndroidManifest.xml**
+  ```xml
+  <provider
+          android:name="com.baidu.mobads.openad.FileProvider"
+          android:authorities="${applicationId}.bd.provider"
+          android:exported="false"
+          android:grantUriPermissions="true">
+          <meta-data
+              android:name="android.support.FILE_PROVIDER_PATHS"
+              android:resource="@xml/bd_file_paths" />
+  </provider>
+  <provider
+      android:name="android.support.v4.content.FileProvider"
+      android:authorities="${applicationId}.fileprovider"
+      android:exported="false"
+      android:grantUriPermissions="true">
+      <meta-data
+          android:name="android.support.FILE_PROVIDER_PATHS"
+          android:resource="@xml/gdt_file_path" />
+  </provider>
+  ```
+<div style="background-color:rgb(228,244,253);padding:10px;">
+<span style="color:rgb(62,113,167);">
+<b>Note：</b>If your project does not support the ${applicationId} configuration, you can replace ${applicationId} with your app package name.
+</span>
+</div>
+
+**Step 2: Add the folder directory shown in the following figure in the Assets/plugin/Android directory, download the bd_file_paths.xml and gdt_file_path file, and add the downloaded xml file to the created xml folder：**
+
+<div align="center"><img height="200" src="./resources/filepath.png"/></div>
+
+Download [bd_file_paths.xml](../../Assets/Plugins/Android/res/xml/bd_file_paths.xml)
+
+Download [gdt_file_path.xml](../../Assets/Plugins/Android/res/xml/gdt_file_path.xml)
+
+<div style="background-color:rgb(228,244,253);padding:10px;">
+<span style="color:rgb(250,0,0);">
+<b>Note：</b> If you do not configure the above, it will affect the advertising revenue.
+</span>
+</div>
 
 ## 7 GDPR
 This documentation is provided for compliance with the European Union's General Data Protection Regulation (GDPR). 
