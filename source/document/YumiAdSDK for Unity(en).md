@@ -48,6 +48,7 @@
             * [6.2.5 the 64K reference limit](#625-the-64k-reference-limit)
             * [6.2.6 Clicking the Android Resolver/Force Resolve option Android dependencies failed](#626-clicking-the-android-resolverforce-resolve-option-android-dependencies-failed)
          * [6.3 Android 9.0 compatibility considerations](#63-android-90-compatibility-considerations)
+         * [6.4 targetSdkVersion &gt;= 24 compatibility considerations (Required)](#64-targetsdkversion--24-compatibility-considerations-required)
       * [7 GDPR](#7-gdpr)
          * [7.1 Set GDPR](#71-set-gdpr)
          
