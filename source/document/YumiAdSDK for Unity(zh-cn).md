@@ -48,7 +48,6 @@
             * [6.2.5 64k 引用限制](#625-64k-引用限制)
             * [6.2.6 点击 Android Resolver/Force Resolve选项加载SDK提示失败。](#626-点击-android-resolverforce-resolve选项加载sdk提示失败)
          * [6.3 android 9.0 适配](#63-android-90-适配)
-         * [6.4 targetSdkVersion &gt;= 24 适配(必选)](#64-targetsdkversion--24-适配必选)
       * [7 GDPR](#7-gdpr)
          * [7.1 设置 GDPR](#71-设置-gdpr)
          
@@ -132,7 +131,7 @@ YumiAdSDK Unity 插件随着 [Unity Play Services Resolver library](https://gith
 
 ```xml
 <androidPackages>
-  <androidPackage spec="com.yumimobi.ads:mediation:1.1.1" />
+  <androidPackage spec="com.yumimobi.ads:mediation:1.1.2" />
   
   <repositories>
       <repository>https://jcenter.bintray.com/</repository>
@@ -900,50 +899,6 @@ Exception in thread "main" java.lang.RuntimeException: Timeout of 120000 reached
 
 - 将targaetSDKveriosn设置为27或者27以下。
 
-### 6.4 targetSdkVersion >= 24 适配(必选)
- 如果您打包 App 时的 targetSdkVersion >= 24，为了让 SDK 能够正常支持下载、安装 App 类广告，必须按照下面的步骤做兼容性处理
- 
- **步骤一：在 AndroidManifest.xml 中的 Application 标签中添加 provider 标签**
-  ```xml
-  <provider
-    android:name="com.baidu.mobads.openad.FileProvider"
-    android:authorities="${applicationId}.bd.provider"
-    android:exported="false"
-    android:grantUriPermissions="true">
-    <meta-data
-        android:name="android.support.FILE_PROVIDER_PATHS"
-        android:resource="@xml/bd_file_paths" />
-  </provider>
-  <provider
-    android:name="android.support.v4.content.FileProvider"
-    android:authorities="${applicationId}.fileprovider"
-    android:exported="false"
-    android:grantUriPermissions="true">
-    <meta-data
-        android:name="android.support.FILE_PROVIDER_PATHS"
-        android:resource="@xml/gdt_file_path" />
-  </provider>
-  ```
-<div style="background-color:rgb(228,244,253);padding:10px;">
-<span style="color:rgb(62,113,167);">
-<b>提示：</b>如果你的工程不支持 ${applicationId} 配置，可以将 ${applicationId} 替换为你的App包名
-</span>
-</div>
-
-**步骤二：在Assets/plugin/Android 目录下添加下图所示的文件夹目录，下载bd_file_paths.xml和gdt_file_path文件，将下载下来的xml文件添加到创建的 xml 文件夹中：**
-
-添加文件夹的目录如下所示：
-<div align="center"><img height="200" src="./resources/filepath.png"/></div>
-
-Download [bd_file_paths.xml](../../Assets/Plugins/Android/res/xml/bd_file_paths.xml)
-
-Download [gdt_file_path.xml](../../Assets/Plugins/Android/res/xml/gdt_file_path.xml)
-
-<div style="background-color:rgb(228,244,253);padding:10px;">
-<span style="color:rgb(250,0,0);">
-<b>注意：</b> 如果不进行上面的配置，会影响广告收入
-</span>
-</div>
 
 ## 7 GDPR
 本文件是为遵守欧洲联盟的一般数据保护条例(GDPR)而提供的。
