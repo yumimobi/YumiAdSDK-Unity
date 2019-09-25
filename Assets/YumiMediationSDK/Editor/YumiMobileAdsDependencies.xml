@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <dependencies>
     <androidPackages>
-        <androidPackage spec="com.yumimobi.ads:yumiad:1.1.1" />
+        <androidPackage spec="com.yumimobi.ads:yumiad:1.1.2" />
         <repositories>
             <repository>https://jcenter.bintray.com/</repository>
         </repositories>
