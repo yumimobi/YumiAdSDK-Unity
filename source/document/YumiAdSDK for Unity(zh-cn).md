@@ -131,7 +131,7 @@ YumiAdSDK Unity 插件随着 [Unity Play Services Resolver library](https://gith
 
 ```xml
 <androidPackages>
-  <androidPackage spec="com.yumimobi.ads:mediation:1.1.2" />
+  <androidPackage spec="com.yumimobi.ads:mediation:1.2.0" />
   
   <repositories>
       <repository>https://jcenter.bintray.com/</repository>
