@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <dependencies>
     <androidPackages>
-       <androidPackage spec="com.yumimobi.ads:yumiad:1.2.0" />
+       <androidPackage spec="com.yumimobi.ads:yumiad:4.5.0.000" />
         <repositories>
             <repository>https://jcenter.bintray.com/</repository>
         </repositories>
     </androidPackages>
     <iosPods>
-        <iosPod name="YumiAdSDK" version="1.2.0" minTargetSdk="8.0">
+        <iosPod name="YumiAdSDK" version="4.5.0.000" minTargetSdk="9.0">
             <sources>
-                <source>https://github.com/CocoaPods/Specs</source>
+                <source>https://github.com/yumimobi/Specs</source>
             </sources>
         </iosPod>
     </iosPods>
