@@ -108,7 +108,7 @@ YumiAdSDK Unity 插件随着 [Unity Play Services Resolver library](https://gith
 
 ```xml
     <iosPods>
-        <iosPod name="YumiAdSDK" version="1.2.0" minTargetSdk="8.0">
+        <iosPod name="YumiAdSDK" version="4.5.0.000" minTargetSdk="8.0">
             <sources>
                 <source>https://github.com/CocoaPods/Specs</source>
             </sources>
@@ -131,7 +131,7 @@ YumiAdSDK Unity 插件随着 [Unity Play Services Resolver library](https://gith
 
 ```xml
 <androidPackages>
-  <androidPackage spec="com.yumimobi.ads:mediation:1.2.0" />
+  <androidPackage spec="com.yumimobi.ads:mediation:4.5.0.000" />
   
   <repositories>
       <repository>https://jcenter.bintray.com/</repository>
