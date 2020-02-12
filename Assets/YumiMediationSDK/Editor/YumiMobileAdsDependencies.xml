@@ -7,7 +7,7 @@
         </repositories>
     </androidPackages>
     <iosPods>
-        <iosPod name="YumiAdSDK" version="4.5.0.000" minTargetSdk="9.0">
+        <iosPod name="YumiAdSDK" version="4.5.1.000" minTargetSdk="8.0">
             <sources>
                 <source>https://github.com/yumimobi/Specs</source>
             </sources>
