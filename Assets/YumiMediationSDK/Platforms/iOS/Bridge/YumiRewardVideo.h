@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "YumiTypes.h"
-#import <YumiAdSDK/YumiMediationVideo.h>
+#import <YumiMediationSDK/YumiMediationVideo.h>
 
 @interface YumiRewardVideo : NSObject
 
