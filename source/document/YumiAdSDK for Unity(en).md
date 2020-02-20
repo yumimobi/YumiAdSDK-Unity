@@ -65,7 +65,7 @@
 
    - To deploy to iOS
 
-     Xcode 6.0 or higher
+     Xcode 10.0 or higher
 
      iOS 8.0 and above
 
@@ -81,7 +81,7 @@
 
 The YumiAdSDK Unity plugin enables Unity developers to easily serve Yumimobi Ads on Android and iOS apps without having to write Java or Objective-C code. The plugin provides a C# interface for requesting ads that is used by C# scripts in your Unity project. Use the links below to download the Unity package for the plugin or to take a look at its code on GitHub.
 
-[Download the YumiAdSDK Unity plugin](https://github.com/yumimobi/YumiAdSDK-Unity/releases/download/4.5.0.000/YumiAdSDKPlugin.unitypackage)
+[Download the YumiAdSDK Unity plugin](https://github.com/yumimobi/YumiAdSDK-Unity/releases/download/4.5.1.000/YumiAdSDKPlugin.unitypackage)
 
 [VIEW SOURCE](https://github.com/yumimobi/YumiAdSDK-Unity)
 
@@ -110,10 +110,7 @@ iOS dependencies：
 
 ```xml
     <iosPods>
-        <iosPod name="YumiAdSDK" version="4.5.0.000" minTargetSdk="8.0">
-            <sources>
-                <source>https://github.com/CocoaPods/Specs</source>
-            </sources>
+        <iosPod name="YumiAdSDK" version="4.5.1.000" minTargetSdk="8.0">
         </iosPod>
     </iosPods>
 ```
@@ -135,7 +132,7 @@ Android dependencies:
 
 ```xml
 <androidPackages>
-  <androidPackage spec="com.yumimobi.ads:yumiad:4.5.0.000" />
+  <androidPackage spec="com.yumimobi.ads:yumiad:4.5.1.000" />
   <repositories>
       <repository>https://jcenter.bintray.com/</repository>
   </repositories>

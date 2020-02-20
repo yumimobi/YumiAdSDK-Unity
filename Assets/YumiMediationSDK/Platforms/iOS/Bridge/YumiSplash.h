@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "YumiTypes.h"
-#import <YumiAdSDK/YumiMediationSplash.h>
+#import <YumiMediationSDK/YumiMediationSplash.h>
 
 @interface YumiSplash : NSObject
 

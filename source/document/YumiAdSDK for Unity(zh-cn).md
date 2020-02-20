@@ -65,7 +65,7 @@
 
    - 部署 iOS
      
-     Xcode 6.0 或更高版本
+     Xcode 10.0 或更高版本
      
      iOS 8.0 或更高版本
 
@@ -81,7 +81,7 @@
 
 Yumi 聚合广告 Unity 插件使 Unity 开发人员可以轻松地在 Android 和 iOS 应用上展示广告，无需编写 Java 或 Objective-C 代码。该插件提供了一个 C# 接口来请求广告。使用下面的链接下载插件的 Unity 包或在 GitHub 上查看其代码。
 
-[下载YumiAdSDK Unity插件](https://github.com/yumimobi/YumiAdSDK-Unity/releases/download/4.5.0.000/YumiAdSDKPlugin.unitypackage)
+[下载YumiAdSDK Unity插件](https://github.com/yumimobi/YumiAdSDK-Unity/releases/download/4.5.1.000/YumiAdSDKPlugin.unitypackage)
 
 [查看源码](https://github.com/yumimobi/YumiAdSDK-Unity)
 
@@ -108,10 +108,7 @@ YumiAdSDK Unity 插件随着 [Unity Play Services Resolver library](https://gith
 
 ```xml
     <iosPods>
-        <iosPod name="YumiAdSDK" version="4.5.0.000" minTargetSdk="8.0">
-            <sources>
-                <source>https://github.com/CocoaPods/Specs</source>
-            </sources>
+        <iosPod name="YumiAdSDK" version="4.5.1.000" minTargetSdk="8.0">
         </iosPod>
     </iosPods>
 ```
@@ -131,7 +128,7 @@ YumiAdSDK Unity 插件随着 [Unity Play Services Resolver library](https://gith
 
 ```xml
 <androidPackages>
-  <androidPackage spec="com.yumimobi.ads:mediation:4.5.0.000" />
+  <androidPackage spec="com.yumimobi.ads:mediation:4.5.1.000" />
   
   <repositories>
       <repository>https://jcenter.bintray.com/</repository>

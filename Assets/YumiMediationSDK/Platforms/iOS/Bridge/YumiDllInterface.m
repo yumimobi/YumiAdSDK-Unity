@@ -14,9 +14,9 @@
 #import "YumiDebugCenter.h"
 #import "YumiNative.h"
 #import "YumiAdBridgeTool.h"
-#import <YumiAdSDK/YumiTest.h>
+#import <YumiMediationSDK/YumiTest.h>
 #import "YumiSplash.h"
-#import <YumiAdSDK/YumiMediationGDPRManager.h>
+#import <YumiMediationSDK/YumiMediationGDPRManager.h>
 
 /// Returns an NSString copying the characters from |bytes|, a C array of UTF8-encoded bytes.
 /// Returns nil if |bytes| is NULL.
