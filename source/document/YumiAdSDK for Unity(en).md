@@ -135,7 +135,7 @@ Android dependencies:
 
 ```xml
 <androidPackages>
-  <androidPackage spec="com.yumimobi.ads:yumiad:4.5.0.000" />
+  <androidPackage spec="com.yumimobi.ads:yumiad:4.5.1.000" />
   <repositories>
       <repository>https://jcenter.bintray.com/</repository>
   </repositories>
